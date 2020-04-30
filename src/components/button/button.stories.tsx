@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from './button';
 
 export default {
-  title: 'Button'
+  title: 'Button',
 };
 
-export const withText = () => <Button>Click me</Button>
+export const withText = () => <Button>Click me</Button>;

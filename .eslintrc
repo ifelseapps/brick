@@ -9,6 +9,13 @@
     "airbnb",
     "airbnb/hooks"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx", ".json"]
+      }
+    }
+  },
   "plugins": ["@bem-react", "react", "@typescript-eslint"],
   "rules": {
     "semi": ["error", "always"],
@@ -16,6 +23,15 @@
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "react/prop-types": 0,
     "import/prefer-default-export": 0,
+    "implicit-arrow-linebreak": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "@bem-react/no-classname-runtime": "warn",
     "@bem-react/whitelist-levels-imports": [
       "error",

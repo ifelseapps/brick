@@ -9,7 +9,22 @@ module.exports = {
         presets: [['react-app', { flow: false, typescript: true }]],
       },
     });
-    config.resolve.extensions.push('.ts', '.tsx');
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        {
+          loader: 'sass-loader',
+          options: {
+            sassOptions: {
+              includePaths: ['src']
+            }
+          }
+        }
+      ],
+    });
+    config.resolve.extensions.push('.ts', '.tsx', '.scss');
     return config;
   },
 };

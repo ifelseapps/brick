@@ -27,8 +27,12 @@
     "@types/react-dom": "^16.9.7",
     "@typescript-eslint/parser": "^2.30.0",
     "babel-preset-react-app": "^9.1.2",
+    "css-loader": "^3.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
   },
