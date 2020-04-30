@@ -24,6 +24,10 @@
     "react/prop-types": 0,
     "import/prefer-default-export": 0,
     "implicit-arrow-linebreak": "off",
+    "object-curly-newline": "off",
+    "react/jsx-props-no-spreading": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -32,7 +36,6 @@
         "tsx": "never"
       }
     ],
-    "@bem-react/no-classname-runtime": "warn",
     "@bem-react/whitelist-levels-imports": [
       "error",
       {
