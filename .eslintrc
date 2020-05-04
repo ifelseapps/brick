@@ -3,6 +3,9 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
+  "env": {
+    "jest": true,
+  },
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "eslint-config-react",

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -45,6 +45,7 @@
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
+    "@types/jest": "^25.2.1",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
@@ -54,6 +55,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "jest": "^25.5.4",
     "typescript": "^3.8.3"
   }
 }
