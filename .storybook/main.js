@@ -22,7 +22,7 @@ module.exports = {
           loader: 'sass-loader',
           options: {
             sassOptions: {
-              includePaths: ['src']
+              includePaths: ['lib']
             }
           }
         }

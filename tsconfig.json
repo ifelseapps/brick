@@ -8,8 +8,9 @@
     "allowJs": false,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": ["src", "stories"],
-    "baseUrl": "src",
+    "rootDirs": [
+      "lib", "stories"],
+    "baseUrl": "lib",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -22,6 +23,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*", "stories/*"],
+  "include": [
+    "lib/**/*", "stories/*"],
   "exclude": ["node_modules", "build", "scripts"]
 }

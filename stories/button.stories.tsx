@@ -2,7 +2,7 @@ import React from 'react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
 
-import { Button } from '../src/components/button';
+import { Button } from '../lib/components/button';
 
 export default {
   title: 'Button',
