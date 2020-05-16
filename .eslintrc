@@ -21,6 +21,7 @@
   },
   "plugins": ["@bem-react", "react", "@typescript-eslint"],
   "rules": {
+    "max-len": "off",
     "semi": ["error", "always"],
     "quotes": ["error", "single"],
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
@@ -28,6 +29,7 @@
     "import/prefer-default-export": 0,
     "implicit-arrow-linebreak": "off",
     "object-curly-newline": "off",
+    "no-plusplus": "off",
     "react/jsx-props-no-spreading": "off",
     "react/jsx-wrap-multilines": "off",
     "@typescript-eslint/interface-name-prefix": "off",
