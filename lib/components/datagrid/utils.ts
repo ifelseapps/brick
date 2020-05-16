@@ -1,3 +1,4 @@
+import { cn } from '../../classname';
 import { ColumnDataRender, ColumnsInitial, HeaderRows, IColumn } from './contracts';
 
 export function createHeaderRows(columns: ColumnsInitial<unknown>): HeaderRows {
@@ -46,3 +47,5 @@ export function getValueRenderFns<TData>(columns: ColumnsInitial<TData>): Record
     };
   }, {});
 }
+
+export const getClassName = cn('datagrid');
