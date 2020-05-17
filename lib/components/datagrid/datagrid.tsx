@@ -1,6 +1,7 @@
 import React from 'react';
 import { classnames } from '@bem-react/classnames';
 import { IClassNameProps } from '@bem-react/core';
+import { useHotKeys } from '../../hooks/useHotKeys/useHotKeys';
 import { ColumnsInitial } from './contracts';
 import { createHeaderRows, getClassName, getValueRenderFns } from './utils';
 import { DataGridColumn } from './__column/datagrid__column';
@@ -18,8 +19,16 @@ export function DataGrid<TData>({ columns, data, className }: IDataGridProps<TDa
   const headerRows = createHeaderRows(columns);
   const valueRenders = getValueRenderFns(columns);
   const idsDataColumn = Object.keys(valueRenders);
+  const [isFocused, setFocused] = React.useState(false);
+  const focusHandler = React.useCallback(() => setFocused(!isFocused), [isFocused]);
+  const hotKeys = useHotKeys(isFocused);
+
+  React.useEffect(() => {
+    hotKeys.bind(['Control', 'F1'], () => alert('Help'));
+  }, []);
+
   return (
-    <table className={classnames(dataGridBlock, className)}>
+    <table className={classnames(dataGridBlock, className)} tabIndex={0} onFocus={focusHandler} onBlur={focusHandler}>
       <thead>
         {headerRows.map((row, index) => (
           <tr key={index.toString()}>
