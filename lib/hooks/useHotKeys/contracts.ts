@@ -76,7 +76,7 @@ export type Key =
   | 'ArrowLeft'
   | 'ArrowRight'
   | 'Enter';
-export type KeyMap = Record<string, boolean>;
+export type KeyMap = Record<Key, boolean>;
 export type Keys = Key[];
 export type Handler = () => void;
 export type HotKeysHandlers = Map<string, Handler>;
