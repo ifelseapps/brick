@@ -11,16 +11,15 @@ export function useHotKeys(isActive: boolean) {
   const handlers = React.useRef<HotKeysHandlers>(new Map<string, Handler>());
   React.useEffect(
     () => {
-      const eventsHandler = (event: KeyboardEvent) => {
-        if (!isActive) {
-          return;
-        }
+      if (!isActive) {
+        keyDownMap.current = {};
+      }
 
+      const unsubscribe = addMultipleEventListeners(document, ['keydown', 'keyup'], (event: KeyboardEvent) => {
         const type = event.type as EventType;
         const { key } = event;
         keyDownMap.current[key] = type === 'keydown';
-
-        if (type !== 'keydown') {
+        if (!isActive || type !== 'keydown') {
           return;
         }
 
@@ -30,9 +29,7 @@ export function useHotKeys(isActive: boolean) {
         if (handler) {
           handler();
         }
-      };
-
-      const unsubscribe = addMultipleEventListeners(document, ['keydown', 'keyup'], eventsHandler);
+      });
       return () => unsubscribe();
     },
     [isActive],
