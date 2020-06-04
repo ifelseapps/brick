@@ -1,0 +1,8 @@
+.datagrid__row_active {
+  background: lightgrey;
+}
+
+.datagrid:focus .datagrid__row_active {
+  background: blue;
+  color: #fff;
+}

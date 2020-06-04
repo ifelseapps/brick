@@ -62,6 +62,13 @@ const rows: IRowData[] = [
     credit: '50',
     amount: '50 000,00',
   },
+  {
+    id: '0000000003',
+    date: '05.05.2020',
+    debit: '71',
+    credit: '50',
+    amount: '50 000,00',
+  },
 ];
 
 export const testExample = () =>
